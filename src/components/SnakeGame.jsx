@@ -40,15 +40,19 @@ const SnakeGame = ({ onScoreUpdate, onGameOver, reset }) => {
       switch (e.key) {
         case 'ArrowUp':
           if (direction.y === 0) setNextDirection({ x: 0, y: -1 });
+          e.preventDefault(); // Evitar el desplazamiento de la página
           break;
         case 'ArrowDown':
           if (direction.y === 0) setNextDirection({ x: 0, y: 1 });
+          e.preventDefault(); // Evitar el desplazamiento de la página
           break;
         case 'ArrowLeft':
           if (direction.x === 0) setNextDirection({ x: -1, y: 0 });
+          e.preventDefault(); // Evitar el desplazamiento de la página
           break;
         case 'ArrowRight':
           if (direction.x === 0) setNextDirection({ x: 1, y: 0 });
+          e.preventDefault(); // Evitar el desplazamiento de la página
           break;
       }
     };

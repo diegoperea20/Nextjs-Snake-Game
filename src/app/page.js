@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import SnakeGame from "@/components/SnakeGame";
+import Link from 'next/link';
 
 export default function Home() {
   const [score, setScore] = useState(0);
@@ -39,6 +40,12 @@ export default function Home() {
         <button onClick={() => handleDirectionChange('ArrowDown')}>↓</button>
         <button onClick={() => handleDirectionChange('ArrowRight')}>→</button>
       </div>
+      <div className="project-github">
+      <p>This project is in </p>
+      <Link href="https://github.com/diegoperea20/Nextjs-Snake-Game">
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="github"/>
+      </Link>
+    </div>
     </div>
   );
 }
